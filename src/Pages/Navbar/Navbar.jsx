@@ -13,7 +13,7 @@ const NavBar = () => {
 
   useEffect(() => {
     if (isDrawerOpen) {
-      // Delay content animation
+     
       const timer = setTimeout(() => setShowDelayedContent(true), 300);
       return () => clearTimeout(timer);
     } else {

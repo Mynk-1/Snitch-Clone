@@ -21,7 +21,7 @@ const Profile = () => {
   const [showLeftArrow, setShowLeftArrow] = useState(false);
   const [showRightArrow, setShowRightArrow] = useState(false);
 
-  // Minimum scroll amount (in pixels) before showing left arrow
+ 
   const SCROLL_THRESHOLD = 50;
 
   const menuGroups = [

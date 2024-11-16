@@ -6,7 +6,7 @@ import {
   Youtube,
   Twitter,
   Linkedin,
-} from "lucide-react"; // Importing icons
+} from "lucide-react"; 
 
 const Footer = () => {
   const [isOpen, setIsOpen] = useState({

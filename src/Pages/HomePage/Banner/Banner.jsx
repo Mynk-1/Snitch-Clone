@@ -14,17 +14,7 @@ const SnitchLuxeBanner = () => {
           className="w-full h-full object-cover"
         />
       </picture>
-      {/* <div className="absolute inset-0 bg-black bg-opacity-30 flex flex-col justify-center items-start p-8 md:p-16">
-        <h1 className="text-white text-4xl md:text-5xl font-bold mb-4">
-          SNITCH LUXE
-        </h1>
-        <p className="text-white text-lg md:text-xl mb-6 max-w-md">
-          Elevate your style with the refined elegance of Luxe Collection.
-        </p>
-        <button className="bg-orange-400 text-white py-2 px-6 rounded hover:bg-orange-500 transition duration-300">
-          EXPLORE NOW
-        </button>
-      </div> */}
+     
     </div>
   );
 };

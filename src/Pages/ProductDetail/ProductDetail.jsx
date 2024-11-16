@@ -10,10 +10,10 @@ const ProductDetail = () => {
   
 
   
-  // Convert id to number and filter the product
+  
   const product =useSelector((state) => state.product.clickedProduct);
 
-  // If product not found, you might want to handle that case
+  
   if (!product) {
     return <div className="container mx-auto p-4">Product not found</div>;
   }

@@ -1,4 +1,4 @@
-// src/features/productSlice.js
+
 
 import { createSlice } from '@reduxjs/toolkit';
 

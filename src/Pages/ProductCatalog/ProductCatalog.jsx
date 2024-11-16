@@ -7,7 +7,7 @@ import {
   X,
 } from "lucide-react";
 
-// Assuming ProductCard is in the same directory, adjust the import path if needed
+
 import ProductCard from "../Cards/ProductCard";
 
 const initialFilters = {

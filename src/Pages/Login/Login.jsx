@@ -14,16 +14,16 @@ const Login = () => {
     setError(null);
 
     try {
-      // Mock OTP request logic
+      
       if (phoneNumber.length !== 10) {
         throw new Error("Please enter a valid 10-digit phone number");
       }
-      // Simulate sending OTP
+    
       setTimeout(() => {
         console.log("OTP sent to: ", phoneNumber);
         setIsOtpSent(true);
         setLoading(false);
-      }, 1000); // Simulate a delay of 1 second
+      }, 1000); 
     } catch (err) {
       setError(err.message || "Error sending OTP. Please try again.");
       setLoading(false);
@@ -35,10 +35,10 @@ const Login = () => {
     setError(null);
 
     try {
-      // Mock OTP verification
+     
       if (otp === "123456") {
         console.log("OTP Verified. User logged in!");
-        // Simulate post-login logic
+        
       } else {
         throw new Error("Invalid OTP. Please try again.");
       }
@@ -51,7 +51,7 @@ const Login = () => {
 
   const handlePhoneNumberChange = (e) => {
     const value = e.target.value;
-    // Only allow digits
+    
     if (/^\d*$/.test(value) || value === "") {
       setPhoneNumber(value);
     }

@@ -16,11 +16,11 @@ const ProductCard = ({ product }) => {
   const handleClick = () => {
     dispatch(setClickedProduct(product));
     console.log("Clicked Product:", clickedProduct);
-    handleScroll(); // Scroll immediately after clicking
+    handleScroll(); 
     navigate("/product");
   };
   
-  // Log `clickedProduct` each time it updates
+
   
 
   return (
