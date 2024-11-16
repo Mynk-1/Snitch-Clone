@@ -1,15 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Provider } from 'react-redux';
 import store from '../src/Store/Store';
-
 import HomePage from "../src/Pages/HomePage/HomePage/HomePage";
-
-
-
 import ProductDetail from "./Pages/ProductDetail/ProductDetail";
 import ProductCatalog from "./Pages/ProductCatalog/ProductCatalog";
-
-// import Profile from "./Pages/Login/Profile";
 import Login from "./Pages/Login/Login";
 
 import Navigation from "./Pages/Navbar/Navbar";
@@ -39,7 +33,7 @@ function App() {
   );
 }
 
-// Wrap the entire App in Router
+
 const AppWithRouter = () => (
   <Router>
     <App />
