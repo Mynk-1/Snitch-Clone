@@ -1,25 +1,49 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Provider } from 'react-redux';
+import store from '../src/Store/Store';
+
+import HomePage from "../src/Pages/HomePage/HomePage/HomePage";
+
+
+
+import ProductDetail from "./Pages/ProductDetail/ProductDetail";
+import ProductCatalog from "./Pages/ProductCatalog/ProductCatalog";
+
+// import Profile from "./Pages/Login/Profile";
+import Login from "./Pages/Login/Login";
+
+import Navigation from "./Pages/Navbar/Navbar";
+import MobileNavBar from "./Pages/Navbar/MobBottomNav";
+import Footer from "./Pages/Footer/Footer";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <Provider store={store}>
+      <div className="bg-black text-white text-center py-1 lg-p-2 text-lg font-semibold font-titillium">
+        Get extra 10% off on all the products.....
+      </div>
+      <Navigation />
+
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+         <Route path="/login" element={<Login />} />
+        <Route path="/product" element={<ProductDetail />} />
+        <Route path="/productcatalog" element={<ProductCatalog />} />
+      </Routes>
+
+      <Footer />
+      <MobileNavBar/>
+      </Provider>
     </div>
   );
 }
 
-export default App;
+// Wrap the entire App in Router
+const AppWithRouter = () => (
+  <Router>
+    <App />
+  </Router>
+);
+
+export default AppWithRouter;
