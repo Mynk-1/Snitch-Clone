@@ -8,7 +8,7 @@ const BagSlider = ({ isOpen, setToggle }) => {
   const initiatePayment = async () => {
     try {
       // Step 1: Create an order by calling the backend API
-      const orderResponse = await axios.post('http://localhost:5000/api/payment/create-order', {
+      const orderResponse = await axios.post('https://snitch-backend-murex.vercel.app/api/payment/create-order', {
         amount: 500 // Amount in currency subunits (e.g., paise for INR)
       });
       const { orderId, amount, currency } = orderResponse.data;
@@ -23,7 +23,7 @@ const BagSlider = ({ isOpen, setToggle }) => {
         order_id: orderId, // Order ID returned from the backend
         handler: async (response) => {
           // Step 3: Verify payment on the backend
-          const paymentVerificationResponse = await axios.post('http://localhost:5000/api/payment/verify-payment', {
+          const paymentVerificationResponse = await axios.post('https://snitch-backend-murex.vercel.app/api/payment/verify-payment', {
             razorpay_order_id: response.razorpay_order_id,
             razorpay_payment_id: response.razorpay_payment_id,
             razorpay_signature: response.razorpay_signature,
